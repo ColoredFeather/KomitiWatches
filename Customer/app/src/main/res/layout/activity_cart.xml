@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_cart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.komitiwatches.customer.CartActivity">
+
+    <TextView
+        android:id="@+id/no_item_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:text="Nohing in your cart to place the order."/>
+
+    <com.andexert.library.RippleView
+        android:id="@+id/place_your_order_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorAccent"
+            android:text="Place your order"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryText" />
+    </com.andexert.library.RippleView>
+</RelativeLayout>

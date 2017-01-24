@@ -48,7 +48,8 @@
             android:layout_below="@id/model_ll"
             android:layout_width="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_height="300dp" />
+            android:layout_height="300dp"
+            android:adjustViewBounds="true"/>
 
         <LinearLayout
             android:id="@+id/price_ll"
@@ -76,12 +77,16 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="horizontal">
-                <ImageView
+                <com.andexert.library.RippleView
                     android:id="@+id/minus_button"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/ic_minus"
-                    android:layout_marginRight="8dp"/>
+                    android:layout_marginRight="8dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_minus" />
+                </com.andexert.library.RippleView>
                 <TextView
                     android:id="@+id/quantity_tv"
                     android:layout_width="wrap_content"
@@ -90,12 +95,16 @@
                     android:textColor="@color/colorAccent"
                     android:text="0"
                     android:textSize="16dp"/>
-                <ImageView
+                <com.andexert.library.RippleView
                     android:id="@+id/add_button"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:src="@drawable/ic_add"
-                    android:layout_marginLeft="8dp"/>
+                    android:layout_marginLeft="8dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_add" />
+                </com.andexert.library.RippleView>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

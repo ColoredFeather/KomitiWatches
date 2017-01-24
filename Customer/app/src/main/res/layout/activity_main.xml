@@ -22,40 +22,39 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true">
 
-        <Button
+        <com.andexert.library.RippleView
             android:id="@+id/filter_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorAccent"
-            android:text="FILTER"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryText" />
+            android:layout_weight="1">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:text="FILTER"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryText" />
+        </com.andexert.library.RippleView>
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@color/colorDivider"/>
-        <Button
-            android:id="@+id/list_button"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorAccent"
-            android:text="List"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryText" />
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@color/colorDivider"/>
-        <Button
+        <com.andexert.library.RippleView
             android:id="@+id/clear_button"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorAccent"
-            android:text="CLEAR"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryText" />
+            android:layout_weight="1">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:text="CLEAR"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryText" />
+        </com.andexert.library.RippleView>
     </LinearLayout>
 </RelativeLayout>

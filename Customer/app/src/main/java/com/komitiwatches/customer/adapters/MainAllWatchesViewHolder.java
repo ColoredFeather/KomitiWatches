@@ -7,6 +7,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.andexert.library.RippleView;
 import com.komitiwatches.customer.R;
 
 /**
@@ -15,7 +16,8 @@ import com.komitiwatches.customer.R;
 
 public class MainAllWatchesViewHolder extends RecyclerView.ViewHolder {
     TextView modelNumber, modelType, price, quantity;
-    ImageView addButton, minusButton, watchImage;
+    ImageView watchImage;
+    RippleView addButton, minusButton;
 
     public MainAllWatchesViewHolder(View itemView) {
         super(itemView);
@@ -24,7 +26,7 @@ public class MainAllWatchesViewHolder extends RecyclerView.ViewHolder {
         price = (TextView) itemView.findViewById(R.id.price_tv);
         quantity = (TextView) itemView.findViewById(R.id.quantity_tv);
         watchImage = (ImageView) itemView.findViewById(R.id.image_layout);
-        addButton = (ImageView) itemView.findViewById(R.id.add_button);
-        minusButton = (ImageView) itemView.findViewById(R.id.minus_button);
+        addButton = (RippleView) itemView.findViewById(R.id.add_button);
+        minusButton = (RippleView) itemView.findViewById(R.id.minus_button);
     }
 }
