@@ -14,14 +14,13 @@ import com.komitiwatches.customer.R;
 
 public class CartItemsViewHolder extends RecyclerView.ViewHolder {
     ImageView itemImage;
-    TextView modelNumber, price;
+    TextView modelNumber;
     EditText quantity;
 
     public CartItemsViewHolder(View itemView) {
         super(itemView);
         itemImage = (ImageView) itemView.findViewById(R.id.rv_item_image_view);
         modelNumber = (TextView) itemView.findViewById(R.id.rv_model_number);
-        price = (TextView) itemView.findViewById(R.id.rv_price);
         quantity = (EditText) itemView.findViewById(R.id.rv_quantity);
     }
 }

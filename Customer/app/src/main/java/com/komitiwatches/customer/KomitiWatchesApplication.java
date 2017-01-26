@@ -22,6 +22,7 @@ public class KomitiWatchesApplication extends Application {
         RealmConfiguration realmConfiguration = new RealmConfiguration.Builder()
                 .name("komiti.realm")
                 .schemaVersion(0)
+                .deleteRealmIfMigrationNeeded()
                 .build();
         Realm.setDefaultConfiguration(realmConfiguration);
 

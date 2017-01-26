@@ -12,99 +12,91 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <LinearLayout
-            android:id="@+id/model_ll"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:orientation="horizontal"
-            android:layout_alignParentTop="true"
-            android:background="@color/colorPrimary">
-            <TextView
-                android:id="@+id/model_number_tv"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="#KW00123"
-                android:gravity="center_vertical"
-                android:textSize="20dp"
-                android:textColor="@color/colorWhite"
-                android:textStyle="bold"
-                android:layout_marginLeft="16dp"/>
-
-            <TextView
-                android:id="@+id/model_type_tv"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:gravity="center_vertical|end"
-                android:textColor="@color/colorDivider"
-                android:text="Sports-Gents"
-                android:textSize="16dp"
-                android:layout_marginRight="16dp" />
-        </LinearLayout>
-
         <ImageView
             android:id="@+id/image_layout"
-            android:layout_below="@id/model_ll"
             android:layout_width="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_height="300dp"
             android:adjustViewBounds="true"/>
 
         <LinearLayout
-            android:id="@+id/price_ll"
-            android:layout_below="@id/image_layout"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:orientation="horizontal"
-            android:layout_marginRight="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp">
-            <TextView
-                android:id="@+id/price_tv"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:text="Rs. 250/per watch"
-                android:gravity="center_vertical"
-                android:textSize="20dp"
-                android:textColor="@color/colorPrimaryText"
-                android:textStyle="bold"/>
+            android:layout_height="100dp"
+            android:layout_below="@id/image_layout"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/activity_vertical_margin">
 
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:id="@+id/model_ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:orientation="horizontal">
-                <com.andexert.library.RippleView
-                    android:id="@+id/minus_button"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginRight="8dp">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/circle_minus_shape" />
-                </com.andexert.library.RippleView>
                 <TextView
-                    android:id="@+id/quantity_tv"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/model_number_tv"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="#KW00123"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/model_type_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
                     android:gravity="center_vertical|end"
-                    android:textColor="@color/colorAccent"
-                    android:text="0"
-                    android:textSize="16dp"/>
-                <com.andexert.library.RippleView
-                    android:id="@+id/add_button"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginLeft="8dp">
-                    <ImageView
-                        android:layout_width="match_parent"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:text="Sports-Gents"
+
+                    android:textSize="16dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/price_ll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <com.andexert.library.RippleView
+                        android:id="@+id/minus_button"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginRight="8dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/circle_minus_shape" />
+                    </com.andexert.library.RippleView>
+                    <TextView
+                        android:id="@+id/quantity_tv"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:src="@drawable/circle_plus_shape" />
-                </com.andexert.library.RippleView>
+                        android:gravity="center_vertical|end"
+                        android:textColor="@color/colorAccent"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+                    <com.andexert.library.RippleView
+                        android:id="@+id/add_button"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginLeft="8dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/circle_plus_shape" />
+                    </com.andexert.library.RippleView>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

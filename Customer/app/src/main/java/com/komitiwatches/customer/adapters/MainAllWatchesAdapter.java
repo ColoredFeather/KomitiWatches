@@ -39,7 +39,6 @@ public class MainAllWatchesAdapter extends RecyclerView.Adapter<MainAllWatchesVi
         final InCartItems inCartItem = list.get(position);
         holder.modelNumber.setText(inCartItem.getWatchEntity().getModelNumber());
         holder.modelType.setText(inCartItem.getWatchEntity().getModelType());
-        holder.price.setText(activity.getResources().getString(R.string.amount, inCartItem.getWatchEntity().getPrize()));
         if(position==0) {
             holder.watchImage.setImageResource(R.drawable.a_1);
         } else if(position==1) {

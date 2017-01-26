@@ -15,7 +15,6 @@ import static com.komitiwatches.customer.AppConstance.FILTER_REQUEST_CODE;
 public class FilterActivity extends AppCompatActivity {
 
     private Spinner modelTypeSpinner;
-    private Spinner maxPriceSpinner;
     private RippleView filterButton;
 
     @Override
@@ -28,7 +27,6 @@ public class FilterActivity extends AppCompatActivity {
 
     private void initViews() {
         modelTypeSpinner = (Spinner) findViewById(R.id.spinner_model_type);
-        maxPriceSpinner = (Spinner) findViewById(R.id.spinner_max_price);
         filterButton = (RippleView) findViewById(R.id.filter_button);
 
         filterButton.setOnClickListener(new View.OnClickListener() {
@@ -36,7 +34,6 @@ public class FilterActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent();
                 intent.putExtra("modelType", modelTypeSpinner.getSelectedItem().toString());
-                intent.putExtra("maxPrice", maxPriceSpinner.getSelectedItem().toString());
                 setResult(AppConstance.FILTER_REQUEST_CODE, intent);
                 finish();
             }

@@ -23,7 +23,6 @@ public class MainAllWatchesViewHolder extends RecyclerView.ViewHolder {
         super(itemView);
         modelNumber = (TextView) itemView.findViewById(R.id.model_number_tv);
         modelType = (TextView) itemView.findViewById(R.id.model_type_tv);
-        price = (TextView) itemView.findViewById(R.id.price_tv);
         quantity = (TextView) itemView.findViewById(R.id.quantity_tv);
         watchImage = (ImageView) itemView.findViewById(R.id.image_layout);
         addButton = (RippleView) itemView.findViewById(R.id.add_button);

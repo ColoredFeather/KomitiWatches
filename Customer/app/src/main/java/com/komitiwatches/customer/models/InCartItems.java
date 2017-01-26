@@ -105,16 +105,10 @@ public class InCartItems extends RealmObject {
         return result;
     }
 
-    public static RealmResults<InCartItems> getFilteredItems(String modelType, int price){
+    public static RealmResults<InCartItems> getFilteredItems(String modelType){
         Realm realm = Realm.getDefaultInstance();
-        RealmResults<InCartItems> results = null;
-        if("".equals(modelType)){
-            results = realm.where(InCartItems.class).lessThanOrEqualTo("watchEntity.prize", price).findAll();
-        } else if(price == 0){
-            results = realm.where(InCartItems.class).equalTo("watchEntity.modelType", modelType).findAll();
-        } else {
-            results = realm.where(InCartItems.class).equalTo("watchEntity.modelType", modelType).lessThanOrEqualTo("watchEntity.prize", price).findAll();
-        }
+        RealmResults<InCartItems> results = realm.where(InCartItems.class)
+                                                .equalTo("watchEntity.modelType", modelType).findAll();
         return results;
     }
 }

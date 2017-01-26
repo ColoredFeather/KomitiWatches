@@ -1,22 +1,11 @@
 <resources>
     <string name="app_name">Komiti Watches</string>
 
-    <string name="amount">Rs. %1$d</string>
-
     <string-array name="model_type">
         <item>All</item>
         <item>Sports-Gents</item>
         <item>Sports-Ladies</item>
         <item>China-Gents</item>
         <item>China-Ladies</item>
-    </string-array>
-
-    <string-array name="max_price">
-        <item>Any</item>
-        <item>100</item>
-        <item>200</item>
-        <item>300</item>
-        <item>500</item>
-        <item>1000</item>
     </string-array>
 </resources>

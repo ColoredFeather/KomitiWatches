@@ -46,7 +46,6 @@ public class CartItemsAdapter extends RecyclerView.Adapter<CartItemsViewHolder> 
             holder.itemImage.setImageResource(R.drawable.a_4);
         }
         holder.modelNumber.setText(inCartItem.getWatchEntity().getModelNumber());
-        holder.price.setText(activity.getResources().getString(R.string.amount, inCartItem.getWatchEntity().getPrize()));
         holder.quantity.setText(String.valueOf(inCartItem.getQuantity()));
 
         holder.quantity.addTextChangedListener(new TextWatcher() {

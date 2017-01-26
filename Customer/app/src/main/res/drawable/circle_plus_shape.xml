@@ -2,14 +2,14 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="oval">
-            <solid android:color="@color/colorBlack"/>
+            <solid android:color="@color/colorAccent"/>
             <size android:height="16dp"
                 android:width="16dp"/>
         </shape>
     </item>
     <item android:gravity="center" android:width="12dp">
         <shape android:shape="line">
-            <stroke android:width="1dp" android:color="@android:color/white" />
+            <stroke android:width="1dp" android:color="@color/colorPrimary" />
         </shape>
     </item>
     <item android:gravity="center" android:width="12dp">
@@ -19,7 +19,7 @@
             android:pivotY="50%"
             android:toDegrees="-90">
             <shape android:shape="line">
-                <stroke android:width="1dp" android:color="@android:color/white" />
+                <stroke android:width="1dp" android:color="@color/colorPrimary" />
             </shape>
         </rotate>
     </item>

@@ -17,7 +17,6 @@ public class WatchEntity extends RealmObject{
     private String modelNumber;
 
     private String modelType;
-    private int prize;
     private Boolean available;
     private String url;
 
@@ -35,14 +34,6 @@ public class WatchEntity extends RealmObject{
 
     public void setModelType(String modelType) {
         this.modelType = modelType;
-    }
-
-    public int getPrize() {
-        return prize;
-    }
-
-    public void setPrize(int prize) {
-        this.prize = prize;
     }
 
     public Boolean getAvailable() {
@@ -67,7 +58,6 @@ public class WatchEntity extends RealmObject{
             realm.beginTransaction();
             WatchEntity watch1 = realm.createObject(WatchEntity.class, "#KW001");
             watch1.setModelType("Sports-Gents");
-            watch1.setPrize(545);
             watch1.setAvailable(true);
             watch1.setUrl("http://abc.com");
 
@@ -76,7 +66,6 @@ public class WatchEntity extends RealmObject{
 
             WatchEntity watch2 = realm.createObject(WatchEntity.class, "#KW002");
             watch2.setModelType("Sports-Ladies");
-            watch2.setPrize(300);
             watch2.setAvailable(true);
             watch2.setUrl("http://efg.com");
 
@@ -85,7 +74,6 @@ public class WatchEntity extends RealmObject{
 
             WatchEntity watch3 = realm.createObject(WatchEntity.class, "#KW003");
             watch3.setModelType("China-Gents");
-            watch3.setPrize(275);
             watch3.setAvailable(true);
             watch3.setUrl("http://abc.com");
 
@@ -94,7 +82,6 @@ public class WatchEntity extends RealmObject{
 
             WatchEntity watch4 = realm.createObject(WatchEntity.class, "#KW004");
             watch4.setModelType("China-Ladies");
-            watch4.setPrize(100);
             watch4.setAvailable(true);
             watch4.setUrl("http://efg.com");
 

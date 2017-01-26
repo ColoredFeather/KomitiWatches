@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -70,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements MainAllWatchesAda
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recycleView.setLayoutManager(linearLayoutManager);
+        recycleView.setNestedScrollingEnabled(false);
         adapter = new MainAllWatchesAdapter(this, entities);
         recycleView.setAdapter(adapter);
 
@@ -149,6 +151,12 @@ public class MainActivity extends AppCompatActivity implements MainAllWatchesAda
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        initViews();
+    }
+
+    @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         switch (requestCode) {
             case CALL_REQUEST_CODE: {
@@ -164,25 +172,17 @@ public class MainActivity extends AppCompatActivity implements MainAllWatchesAda
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if(requestCode == AppConstance.FILTER_REQUEST_CODE){
+        if(requestCode == AppConstance.FILTER_REQUEST_CODE && data != null){
             String modelType = data.getStringExtra("modelType");
-            String maxPrice = data.getStringExtra("maxPrice");
             RealmResults<InCartItems> results = null;
-            if(!"All".equalsIgnoreCase(modelType) || !"Any".equalsIgnoreCase(maxPrice)){
-                if("All".equalsIgnoreCase(modelType)){
-                    results = InCartItems.getFilteredItems("", Integer.valueOf(maxPrice));
-                    adapter.updateList(results);
-                } else if("Any".equalsIgnoreCase(maxPrice)){
-                    results = InCartItems.getFilteredItems(modelType, 0);
-                    adapter.updateList(results);
-                } else {
-                    results = InCartItems.getFilteredItems(modelType, Integer.valueOf(maxPrice));
-                    adapter.updateList(results);
-                }
+            if(!"All".equalsIgnoreCase(modelType)){
+                results = InCartItems.getFilteredItems(modelType);
+                adapter.updateList(results);
             } else {
                 results = InCartItems.getAll();
                 adapter.updateList(results);
             }
+
             if(results.size() == 0){
                 noItemTextView.setVisibility(View.VISIBLE);
             } else {
