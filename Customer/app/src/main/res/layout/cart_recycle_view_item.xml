@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/rv_item_image_view"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/a_1"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/rv_model_number"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:text="#KW001"
+            android:textSize="24sp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryText"
+            android:paddingLeft="@dimen/activity_horizontal_margin"/>
+
+        <TextView
+            android:id="@+id/rv_price"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Rs. 200"
+            android:textSize="16sp"
+            android:gravity="top"
+            android:textColor="@color/colorSecondaryText"
+            android:paddingLeft="@dimen/activity_horizontal_margin"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/rv_quantity"
+        android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:hint="0"
+        android:inputType="number"
+        android:digits="0123456789"
+        android:textAlignment="center"
+        />
+</LinearLayout>

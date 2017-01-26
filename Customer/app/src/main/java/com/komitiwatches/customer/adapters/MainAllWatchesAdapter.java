@@ -5,19 +5,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.komitiwatches.customer.MainActivity;
 import com.komitiwatches.customer.R;
+import com.komitiwatches.customer.models.InCartItems;
 import com.komitiwatches.customer.models.WatchEntity;
 
 import java.util.ArrayList;
+
+import io.realm.RealmResults;
 
 /**
  * Created by anandparmar on 21/01/17.
  */
 
 public class MainAllWatchesAdapter extends RecyclerView.Adapter<MainAllWatchesViewHolder> {
-    private ArrayList<WatchEntity> list;
+    private RealmResults<InCartItems> list;
+    private MainActivity activity;
 
-    public MainAllWatchesAdapter(ArrayList<WatchEntity> list) {
+    public MainAllWatchesAdapter(MainActivity activity, RealmResults<InCartItems> list) {
+        this.activity = activity;
         this.list = list;
     }
 
@@ -30,17 +36,28 @@ public class MainAllWatchesAdapter extends RecyclerView.Adapter<MainAllWatchesVi
 
     @Override
     public void onBindViewHolder(final MainAllWatchesViewHolder holder, int position) {
-        WatchEntity watchEntity = list.get(position);
-        holder.modelNumber.setText(watchEntity.getModelNumber());
-        holder.modelType.setText(watchEntity.getModelType());
-        holder.price.setText(watchEntity.getPrize());
-        holder.quantity.setText("0");
+        final InCartItems inCartItem = list.get(position);
+        holder.modelNumber.setText(inCartItem.getWatchEntity().getModelNumber());
+        holder.modelType.setText(inCartItem.getWatchEntity().getModelType());
+        holder.price.setText(activity.getResources().getString(R.string.amount, inCartItem.getWatchEntity().getPrize()));
+        if(position==0) {
+            holder.watchImage.setImageResource(R.drawable.a_1);
+        } else if(position==1) {
+            holder.watchImage.setImageResource(R.drawable.a_2);
+        } else if(position==2) {
+            holder.watchImage.setImageResource(R.drawable.a_3);
+        } else {
+            holder.watchImage.setImageResource(R.drawable.a_4);
+        }
+        holder.quantity.setText(String.valueOf(inCartItem.getQuantity()));
 
         holder.addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int tempQuantity = Integer.valueOf(holder.quantity.getText().toString());
-                holder.quantity.setText(String.valueOf(tempQuantity+10));
+                holder.quantity.setText(String.valueOf(tempQuantity+5));
+                InCartItems.addOrUpdateItem(inCartItem.getWatchEntity(), tempQuantity+5);
+                activity.handleCartMenuItem();
             }
         });
 
@@ -49,7 +66,9 @@ public class MainAllWatchesAdapter extends RecyclerView.Adapter<MainAllWatchesVi
             public void onClick(View view) {
                 int tempQuantity = Integer.valueOf(holder.quantity.getText().toString());
                 if(tempQuantity != 0) {
-                    holder.quantity.setText(String.valueOf(tempQuantity - 10));
+                    holder.quantity.setText(String.valueOf(tempQuantity - 5));
+                    InCartItems.addOrUpdateItem(inCartItem.getWatchEntity(), tempQuantity - 5);
+                    activity.handleCartMenuItem();
                 }
             }
         });
@@ -58,5 +77,14 @@ public class MainAllWatchesAdapter extends RecyclerView.Adapter<MainAllWatchesVi
     @Override
     public int getItemCount() {
         return list.size();
+    }
+
+    public interface ChangeCartNumber{
+        void handleCartMenuItem();
+    }
+
+    public void updateList(RealmResults<InCartItems> list){
+        this.list = list;
+        notifyDataSetChanged();
     }
 }

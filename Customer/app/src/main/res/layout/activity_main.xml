@@ -15,6 +15,15 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:listitem="@layout/card_view_item"/>
 
+    <TextView
+        android:id="@+id/no_item_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/activity_horizontal_margin"
+        android:text="Nothing to show."
+        android:visibility="gone"/>
+
     <LinearLayout
         android:id="@+id/buttons"
         android:layout_width="match_parent"
@@ -33,7 +42,7 @@
                 android:background="@color/colorAccent"
                 android:text="FILTER"
                 android:textStyle="bold"
-                android:textColor="@color/colorPrimaryText" />
+                android:textColor="@color/colorPrimary" />
         </com.andexert.library.RippleView>
         <View
             android:layout_width="1dp"
@@ -54,7 +63,7 @@
                 android:background="@color/colorAccent"
                 android:text="CLEAR"
                 android:textStyle="bold"
-                android:textColor="@color/colorPrimaryText" />
+                android:textColor="@color/colorPrimary" />
         </com.andexert.library.RippleView>
     </LinearLayout>
 </RelativeLayout>
