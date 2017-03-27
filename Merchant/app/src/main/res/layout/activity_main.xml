@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.coloredfeather.komitiwathces.merchant.ui.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="64dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_number"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/model_number_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="model number*"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/model_number_edit_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorBlack"
+                        android:inputType="textCapCharacters"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/black_cursor" />
+
+                    <TextView
+                        android:id="@+id/model_number_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="please enter a valid model number"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_type" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/model_type_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="model type*"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/model_type_edit_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:entries="@array/model_type" />
+
+                    <TextView
+                        android:id="@+id/model_type_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="please enter a valid model type"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_sub_type" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/model_subtype_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="model subtype*"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/model_subtype_edit_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:entries="@array/model_subtype" />
+
+                    <TextView
+                        android:id="@+id/model_subtype_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="please enter a valid model subtype"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_tag" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_vertical_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/amount_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="amount*"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/amount_edit_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorBlack"
+                        android:inputType="numberDecimal"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textCursorDrawable="@drawable/black_cursor" />
+
+                    <TextView
+                        android:id="@+id/amount_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="please enter a valid amount"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/selected_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/take_piucture_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimaryLight" />
+
+                <ImageView
+                    android:id="@+id/take_picture_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:src="@drawable/camera" />
+
+                <TextView
+                    android:id="@+id/take_picture_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="click here to take a photo*"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="12sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:background="@color/colorPrimaryLight" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:text="Add New Product"
+        android:textColor="@color/colorAccent" />
+</RelativeLayout>

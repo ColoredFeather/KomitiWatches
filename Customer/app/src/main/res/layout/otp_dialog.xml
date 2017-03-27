@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter OTP"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/big_text_size"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/otp_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_title"
+        android:layout_marginTop="20dp"
+        android:inputType="phone"
+        android:maxLength="6"
+        android:backgroundTint="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/invalid_error_otp_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorRed"
+        android:layout_marginBottom="24dp"
+        android:textSize="@dimen/small_text_size"
+        android:layout_below="@id/otp_edit_text"
+        android:text="enter a valid otp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/cancel"
+        style="@style/dialogButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/otp_edit_text"
+        android:layout_marginTop="@dimen/one_x_dp"
+        android:layout_toLeftOf="@+id/submit_otp"
+        android:text="@android:string/cancel"/>
+
+    <Button
+        android:id="@+id/submit_otp"
+        style="@style/dialogButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@+id/otp_edit_text"
+        android:layout_marginTop="@dimen/one_x_dp"
+        android:text="submit"
+        android:visibility="visible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/otp_edit_text"
+        android:layout_toLeftOf="@+id/cancel">
+
+        <Button
+            android:id="@+id/resend_otp"
+            android:layout_width="wrap_content"
+            style="@style/dialogButton"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/one_x_dp"
+            android:textColor="@color/colorAccent"
+            android:text="resend otp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/one_x_dp"
+            android:gravity="center"
+            android:minWidth="84dp"
+            android:text="00:30"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size"
+            android:visibility="visible"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My eStore"
+            android:textSize="@dimen/three_x_dp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/two_x_dp"
+            android:layout_marginTop="@dimen/two_x_dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_gravity="center_horizontal">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_person"/>
+
+            <EditText
+                android:id="@+id/partner_code_login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="partner code*"
+                android:inputType="textCapCharacters"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorDivider"
+                android:maxLength="8"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/partner_code_error_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/small_text_size"
+            android:paddingLeft="@dimen/three_x_dp"
+            android:text="enter a valid partner code"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_gravity="center_horizontal">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_mobile"/>
+
+            <EditText
+                android:id="@+id/mobile_number_login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="mobile number*"
+                android:inputType="phone"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorDivider"
+                android:maxLength="10"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mobile_number_error_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/small_text_size"
+            android:paddingLeft="@dimen/three_x_dp"
+            android:text="enter a valid mobile number"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/entered_button_login"
+            android:layout_width="@dimen/three_x_dp"
+            android:layout_height="@dimen/three_x_dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/ic_arrow_circle_right"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"/>
+    </LinearLayout>
+
+</RelativeLayout>

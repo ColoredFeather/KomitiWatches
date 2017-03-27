@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "778697998428",
+    "firebase_url": "https://komitiwatches-987a8.firebaseio.com",
+    "project_id": "komitiwatches-987a8",
+    "storage_bucket": "komitiwatches-987a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:778697998428:android:d8e51608956bab14",
+        "android_client_info": {
+          "package_name": "com.coloredfeather.komitiwatches.customer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "778697998428-a6q8b0qn26fgsqj2711aong0819qr109.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASkb-yVgi_Xdf-lVZlcvoYw94i2RMh5lY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

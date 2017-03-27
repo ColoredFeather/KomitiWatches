@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_sign_up"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.coloredfeather.komitiwatches.customer.ui.SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Komiti"
+            android:textSize="@dimen/three_x_dp"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/two_x_dp"
+            android:layout_marginTop="@dimen/two_x_dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_gravity="center_horizontal">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_person"/>
+
+            <EditText
+                android:id="@+id/customer_name_registration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="customer name*"
+                android:inputType="textCapWords"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorDivider"
+                android:maxLength="32"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/customer_name_error_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/small_text_size"
+            android:paddingLeft="@dimen/three_x_dp"
+            android:text="enter a valid customer name"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_gravity="center_horizontal">
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_mobile"/>
+
+            <EditText
+                android:id="@+id/mobile_number_registration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorAccent"
+                android:hint="mobile number*"
+                android:inputType="phone"
+                android:textColor="@color/colorAccent"
+                android:textColorHint="@color/colorDivider"
+                android:maxLength="10"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mobile_number_error_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRed"
+            android:textSize="@dimen/small_text_size"
+            android:paddingLeft="@dimen/three_x_dp"
+            android:text="enter a valid mobile number"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/already_an_user_link_registration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textStyle="italic"
+            android:textSize="@dimen/small_text_size"
+            android:text="@string/already_an_user"
+            android:layout_gravity="end" />
+
+        <Button
+            android:id="@+id/entered_button_registration"
+            android:layout_width="@dimen/three_x_dp"
+            android:layout_height="@dimen/three_x_dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/ic_arrow_circle_right"
+            android:layout_gravity="center_horizontal"
+            android:clickable="true"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -8,4 +8,11 @@
         <item>China-Gents</item>
         <item>China-Ladies</item>
     </string-array>
+
+    <string name="new_user"><u>new user? register here</u></string>
+    <string name="already_an_user"><u>already an user? login here</u></string>
+    <string name="url_appstore">https://play.google.com/store</string>
+
+    <string name="secured_pref_paswword">AD@!RTY#VBCV@123</string>
+    <string name="shared_pref_xml">komitiwatches.xml</string>
 </resources>
